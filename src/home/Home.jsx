@@ -1,6 +1,5 @@
 
 import { LinearProgress, Typography } from '@mui/material';
-import Stack from '@mui/material/Stack';
 import Quiz from '../game/quiz/Quiz';
 import axios from 'axios';
 import { useContext, useEffect } from 'react';
@@ -31,7 +30,7 @@ const Home = () => {
 
 
     return(
-        <Stack direction={'column'} m={'auto'} maxWidth={'30em'}>
+        <>
         {gamesState.loading_new ?
 
             <LinearProgress />
@@ -51,7 +50,7 @@ const Home = () => {
             </>
         }
             
-        </Stack>
+        </>
     )
 }
 

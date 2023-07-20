@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Results from './results/Results';
 import Home from './home/Home';
 import Settings from './settings/Settings';
+import SubmittedGame from './game/sumbittedGame';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       {
         path: 'previous-games',
         element: <Results />
+      },
+      {
+        // dynamic path - will receive game id (note :)
+        path: 'previous-games/:gameId',
+        element: <SubmittedGame />
       },
       {
         path: 'settings',
